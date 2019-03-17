@@ -23,7 +23,7 @@ describe('Space Age Detective', function(){
   const diff=today-birthday;
   const years=diff/1000/60/60/24/365.2422;
   const age=years.toFixed(2);
-  // const planets=["earth","mercury","venus","mars","jupiter"];
+
 
   it('detects age from given date',function(){
     expect(trialRun.calculateAge()).toEqual(age);

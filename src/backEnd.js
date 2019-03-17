@@ -8,8 +8,9 @@ export class Pickle{
   calculateAge(){
     const today= new Date();
     const birthday= new Date;
-    const diff=today-birthday;
-    const years=diff/1000/60/60/24/365;
+    const difference=today-birthday;
+    //time in day
+    const years=difference/1000/60/60/24/365;
     return years.toFixed(2);
   }
 
@@ -17,10 +18,6 @@ export class Pickle{
 
 
   yearsConvert(){
-    // const mercuryAge = (bday.getFullYear())/0.24;
-    // const venusAge = (bday.getFullYear())/0.62;
-    // const marsAge = (bday.getFullYear())/1.88;
-    // const jupiterAge = (bday.getFullYear())/11.86;
-    // return confusion;
+  
   }
 }
