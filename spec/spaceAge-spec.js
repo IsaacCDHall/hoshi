@@ -1,7 +1,7 @@
-import {Pickle} from './../src/backEnd.js';
+import {AgeConverter} from './../src/backEnd.js';
 const today= new Date();
 
-function randomCase(){
+function randomDate(){
   const randomDay=Math.floor((Math.random()*28) + 1);
   const randomMonth=Math.floor((Math.random()*12) + 1);
   const randomYear=Math.floor(Math.random() * (2019 - 1900 + 1) ) + 1900;
@@ -13,12 +13,12 @@ function randomCase(){
     strMonth=randomMonth.toString();
   }
   const strYear=randomYear.toString();
-  const fakeCase = new Pickle(strYear,strMonth,strDay);
-  return fakeCase;
+  const fakeDate = new Pickle(strYear,strMonth,strDay);
+  return fakeDate;
 }
 
 describe('Space Age Detective', function(){
-  const trialRun= randomCase();
+  const trialRun= randomDate();
   const birthday= new Date;
   const diff=today-birthday;
   const years=diff/1000/60/60/24/365.2422;
