@@ -29,5 +29,12 @@ export class AgeClass{
   jupiterAge(age){
     let jupiter = (age / 11.86).toFixed(2);
     return jupiter;
+
   }
+  //create ratio so I can multiple planet ages with this return value
+  youDead(age, lifeExpectInput){
+    let deadByDate = ((lifeExpectInput - age)/ age);
+    return deadByDate;
+  }
+
 }

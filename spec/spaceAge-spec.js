@@ -54,3 +54,11 @@ describe ('jupiterAge', function() {
   });
 
 });
+describe ('youDead', function() {
+
+  it("predicts life expectancy ratio", function() {
+    let deadByDate = test.youDead(22, 44);
+    expect(deadByDate).toEqual(1);
+  });
+
+});
