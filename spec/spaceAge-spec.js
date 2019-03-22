@@ -1,38 +1,56 @@
-import {AgeConverter} from './../src/backEnd.js';
-const today= new Date();
+import {AgeClass} from './../src/backEnd.js';
 
 function randomDate(){
-  const randomDay=Math.floor((Math.random()*28) + 1);
-  const randomMonth=Math.floor((Math.random()*12) + 1);
+  // const randomDay=Math.floor((Math.random()*28) + 1);
+  // const randomMonth=Math.floor((Math.random()*12) + 1);
   const randomYear=Math.floor(Math.random() * (2019 - 1900 + 1) ) + 1900;
-  const strDay=randomDay.toString();
-  let strMonth;
-  if(randomMonth<10){
-    strMonth="0"+randomMonth.toString();
-  } else{
-    strMonth=randomMonth.toString();
-  }
-  const strYear=randomYear.toString();
-  const fakeDate = new Pickle(strYear,strMonth,strDay);
-  return fakeDate;
+  const fakeYear = new AgeClass(randomYear);
+  console.log(fakeYear.year);
+  return fakeYear;
 }
+let test = new AgeClass(1900);
+randomDate();
+describe ('dateToAge', function() {
 
-describe('Space Age Detective', function(){
-  const trialRun= randomDate();
-  const birthday= new Date;
-  const diff=today-birthday;
-  const years=diff/1000/60/60/24/365.2422;
-  const age=years.toFixed(2);
-
-
-  it('detects age from given date',function(){
-    expect(trialRun.calculateAge()).toEqual(age);
+  it("returns user's age on Earth", function() {
+    let age = test.dateToAge('1997');
+    expect(age).toEqual(22);
   });
 
+});
 
-  it('gives life expectancy variant to planet',function(){
-    expect(trialRun.yearsConvert());
+describe ('mercuryAge', function() {
 
+  it("returns user's age on Mercury", function() {
+    let mercury = test.mercuryAge(22);
+    expect(parseFloat(mercury)).toEqual(91.67);
+  });
+
+});
+
+describe ('venusAge', function() {
+
+  it("returns user's age on Venus", function() {
+    let venus = test.venusAge(22);
+    expect(parseFloat(venus)).toEqual(35.48);
+  });
+
+});
+
+describe ('marsAge', function() {
+
+  it("returns user's age on Mars", function() {
+    let mars = test.marsAge(22);
+    expect(parseFloat(mars)).toEqual(11.7);
+  });
+
+});
+
+describe ('jupiterAge', function() {
+
+  it("returns user's age on Jupiter", function() {
+    let jupiter = test.jupiterAge(22);
+    expect(parseFloat(jupiter)).toEqual(1.85);
   });
 
 });
