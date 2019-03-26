@@ -1,39 +1,39 @@
-Take a person’s age in years and create a class that does the following:
+## Description
 
-Returns their age in Mercury years. (A Mercury year is .24 Earth years.)
-Returns their age in Venus years. (A Venus year is .62 Earth years.)
-Returns their age in Mars years. (A Mars year is 1.88 Earth years.)
-Returns their age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
-Determines how many years a user has left to live on each planet… (yikes!) To do this, the application will have to calculate the user’s life expectancy. You can determine average life expectancy as you see fit. A simple way to do this would be to have the user input the average life expectancy for their demographic. A more involved way to do this would be to collect other information from the user (e.g. lifestyle, country of residence, activity level, etc.) to determine their life expectancy.
-If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy
+_This application takes a users age in Earth Years and calculates their age relative to other planets in our solar system_
 
-## Planning
+### Specs
 
-1. Configuration/dependencies
-  * This should include ALL dependencies.
-  * It should also include WHERE they are defined and used in the project
-  * It could include a short description of what each does for you
+1. Takes in a users birthday and life expectancy 
 
-2. Specs
-  * Spec 1: Description, input, output.
-  * Spec 2: Description, input, output.
+2. Use the Date Object to calculate their current age, based on the difference between the current time and when they were born.
 
-3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
+3. Converts Earth years to years on other planets.
+* Mercury (.24 Earth years)
+* Venus (.62 Earth years)
+* Mars (1.88 Earth years)
+* Jupiter (11.86 Earth years)
 
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
+5. Determine how many years the user has left to live on each planet.
 
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
+6. Lastly, it will return a statement of how long you are expected to live on each of the planets mentioned above (or how long you have exceeded the average life expectancy if you are older).
+
+7. Automated tests test each of these methods when you run Karma.
+
+### Installation and Setup
+
+1. Install npm with node.
+2. Clone or download this repository.
+3. Navigate to root directory of the project folder in your terminal, then run the command: npm i(nstall)
+4. To start the project, run this command: npm run start
+5. Other scripts include: npm run test, npm run lint, npm run build
+
+### Technologies Used
+
+* Backend: Node and webpack
+* Front-end: HTML, CSS, and JavaScript (w jQuery)
+* Automated Tests: Jasmine and Karma
+* Linter: eslint
 
 ### License
 This project is licensed under the MIT license, Copyright (c) 2019 [Isaac Hall](/LICENSE.md)
